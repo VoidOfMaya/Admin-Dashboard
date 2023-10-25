@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+div{
+    border: 1px solid black;
+}
+.container{
+    height: 100vh;
+    display:grid;
+    grid-template-columns: 1fr 4fr ;
+}
+.side-bar{
+    background-color: rgb(85, 176, 250);
+}
+.search-bar{
+    display:grid;
+    grid-template-columns: 1fr 3fr repeat(3, 1fr);
+}
+.user-bar{
+    display:grid;
+    grid-template-columns: 1fr 3fr repeat(3, 1fr);
+}
+.main-content{
+    height: 100vh;
+    display:grid;
+    grid-template: 1fr 1fr/ 3fr 1fr;
+    grid-template-areas: "project announcements"
+                         "project trending";
+}
+
+.projects{
+    grid-area: project;
+}
+.announcements{
+    grid-area: announcements;
+}
+.trending{
+    grid-area: trending;
+}
