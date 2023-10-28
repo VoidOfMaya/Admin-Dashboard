@@ -1,39 +1,93 @@
 *{
     padding: 0;
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif;
+ 
+    list-style: none;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&family=Raleway:wght@100&display=swap');
 div{
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 }
 .container{
-    height: 100vh;
+    
     display:grid;
     grid-template-columns: 1fr 4fr ;
 }
+/* sidebarr css*/
 .side-bar{
-    background-color: rgb(85, 176, 250);
+    background-color: #0ea5e9;
+    color: #ffffff;
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+    
 }
+.side-bar ul,.side-bar h1 {
+    justify-self: center;
+}
+.side-bar ul{
+    display: grid;
+    grid-template-rows: 2fr repeat(6, 1fr) repeat(2 ,1fr);
+}
+.side-bar-opt{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    
+}
+.side-bar ul li img{
+    filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(253deg) brightness(106%) contrast(101%);
+}
+
+/*search bar css*/
 .search-bar{
     display:grid;
     grid-template-columns: 1fr 3fr repeat(3, 1fr);
 }
+/*user barr css*/
 .user-bar{
     display:grid;
     grid-template-columns: 1fr 3fr repeat(3, 1fr);
 }
+/* content css*/
 .main-content{
     height: 100vh;
     display:grid;
     grid-template: 1fr 1fr/ 3fr 1fr;
     grid-template-areas: "project announcements"
                          "project trending";
+    
+}
+.main-content-card{
+    background-color:white ;
+    padding: 10px;
+    border-radius: 10px;
+    border-left: 6px solid orange;
+    display: grid;
+    gap: 10px;
+    
 }
 
+
+/*project css*/
 .projects{
     grid-area: project;
+    background-color: rgb(218, 213, 213);
+    padding: 10px;
+
 }
+.projects .content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax( 250px , 1fr)); 
+    gap:20px; 
+    
+}
+
 .announcements{
     grid-area: announcements;
+    
 }
 .trending{
     grid-area: trending;
