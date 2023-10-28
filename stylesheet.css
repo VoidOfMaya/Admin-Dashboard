@@ -58,6 +58,7 @@ div{
     grid-template: 1fr 1fr/ 3fr 1fr;
     grid-template-areas: "project announcements"
                          "project trending";
+    background-color: rgb(218, 213, 213);
     
 }
 .main-content-card{
@@ -74,7 +75,6 @@ div{
 /*project css*/
 .projects{
     grid-area: project;
-    background-color: rgb(218, 213, 213);
     padding: 10px;
 
 }
@@ -85,10 +85,23 @@ div{
     
 }
 
+
 .announcements{
     grid-area: announcements;
     
 }
+.announcements p{
+    border-bottom: 1px solid gray;
+}
 .trending{
     grid-area: trending;
+}
+
+.announcements-card,
+.trending-card{
+    background-color:white ;
+    padding: 10px;
+    border-radius: 10px;
+    
+
 }
