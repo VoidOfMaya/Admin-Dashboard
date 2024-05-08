@@ -40,16 +40,35 @@ div{
 .side-bar ul li img{
     filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(253deg) brightness(106%) contrast(101%);
 }
+/*top bar css*/
+.bar{
+    margin: 3%;
+    
+    
+}
 
 /*search bar css*/
 .search-bar{
     display:grid;
-    grid-template-columns: 1fr 3fr repeat(3, 1fr);
+    grid-template-columns: 1fr 3fr repeat(3, 1fr);    
+}
+.search-btn{
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+}
+.search-btn+input{
+    height:50px;
+    border: none;
+    border-bottom:  1px solid black ;
+    
 }
 /*user barr css*/
 .user-bar{
     display:grid;
     grid-template-columns: 1fr 3fr repeat(3, 1fr);
+
 }
 /* content css*/
 .main-content{
@@ -59,7 +78,7 @@ div{
     grid-template: 1fr 1fr/ 3fr 1fr;
     grid-template-areas: "project announcements"
                          "project trending";
-    background-color: #dbeafe;
+    background-color: #eff5fd;
     
 }
 .main-content-card{
@@ -69,14 +88,19 @@ div{
     border-left: 10px solid orange;
     display: grid;
     gap: 10px;
+    box-shadow: 5px 3px 10px 1px rgba(0,0,0,0.38);
     
 }
-.main-content-card p{
+.main-content-card p,
+.acc p,
+.announcements-card p{
     color: rgb(90, 90, 90);
 }
 
-
 /*project css*/
+.projects h3{
+    padding: 10px 0;
+}
 .projects{
     grid-area: project;
     padding: 10px;
@@ -124,23 +148,57 @@ div{
     background-color: white;
     width: fit-content;
 }
+
+/*side content*/
+.side-content{
+    margin-left: 10px;
+}
+.side-content h3{
+    padding: 15px 0;
+}
 .announcements{
     grid-area: announcements;
     
 }
-.announcements p{
+.announcements-card{
+    display: grid;
+    gap:20px;
+    
+}
+.announcements-card div{
+    padding:20px 0;
     border-bottom: 1px solid gray;
 }
+
 .trending{
+    margin-top: 50px;
     grid-area: trending;
 }
 
 .announcements-card,
 .trending-card{
+    display: grid;
+    gap: 20px;
     background-color:white ;
-    padding: 10px;
     border-radius: 10px;
     padding: 20px;
-    
+    box-shadow: 5px 3px 10px 1px rgba(0,0,0,0.38);
 
+}
+.acc{
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "photo tag"
+    "photo name";
+}
+.acc1{
+    grid-area: photo;
+}
+.acc2{
+    grid-area: tag;
+}
+.acc3{
+    grid-area: name;
 }
