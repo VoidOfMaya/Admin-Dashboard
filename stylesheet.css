@@ -50,24 +50,75 @@ div{
 /*search bar css*/
 .search-bar{
     display:grid;
-    grid-template-columns: 1fr 3fr repeat(3, 1fr);    
+    grid-template-columns: 1fr 5fr repeat(4, 1fr);  
+    gap: 3%; 
+    margin-bottom: 2%; 
+}
+.search-bar input:hover{
+    background-color: #d3d8df;
+}
+.search-user-icon {
+    display: flex;
+    justify-self: center;
 }
 .search-btn{
     height: 50px;
     border: none;
-    border-radius: 5px;
-    background-color: white;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.925);
+}
+.search-btn:hover{
+    background-color: #d3d8df;
 }
 .search-btn+input{
-    height:50px;
+    height:40%;
     border: none;
-    border-bottom:  1px solid black ;
+    align-self: center;
     
 }
-/*user barr css*/
+.search,input{
+    background-color: #eff5fd;
+    border-radius: 40px;
+    padding: 3px;
+}
+.search-bar .notify{
+    margin: auto;
+}
+.search-bar .user{
+    margin: auto;
+}
+.search-bar .name{
+    margin: auto;
+}
+
+/*user bar css*/
 .user-bar{
     display:grid;
     grid-template-columns: 1fr 3fr repeat(3, 1fr);
+    gap: 3%;
+    margin-bottom: 0px;
+
+}
+.user-bar button{
+    background-color: #0ea5e9;
+    color: white;
+    border-color: #0ea5e9;
+    border-radius:20px;
+    padding: 7px  ;
+    max-height: 40px;
+    border: none;
+    
+
+}
+.user-bar button:hover{
+    background-color: #4abcf1;
+    color: white;
+    border-color: #dff0f8;
+    border-radius:20px;
+    padding: 7px  ;
+    max-height: 40px;
+
+    
 
 }
 /* content css*/
